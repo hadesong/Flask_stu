@@ -65,7 +65,7 @@ def page1():
     rsp = make_response('go <a  href="%s">page2</a>'%'/page2')
     rsp.set_cookie('lasttime' , str(time.time()))
     return rsp
-@app.route('/page2')    
+@app.route('/page2')
 def page2():
     lasttime = request.cookies['lasttime']
     return 'lasttime ...... %s' %lasttime
