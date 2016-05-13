@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+</head>
+<body>
+<form method="POST" action="/login">
+<input type="text" name="uid" placeholder="username"></input>	
+<input type="password" name="pwd" placeholder="password"> </input>	
+<input type="submit" value="Login"></input>	
+</form>
+{% with messages = get_flashed_messages() %}
+<!-- 判断是否有flash消息  -->
+{% if messages %}
+<ul>
+{% for message in messages %}
+<li>{{ message }}</li>
+{% endfor %}
+</ul>
+{% endif%}
+{% endwith %}
+<div> {{msg }}</div>
+</body>
+</html>
